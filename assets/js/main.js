@@ -1,6 +1,13 @@
+/* variaveis menu mobile */
 let menu_mobile = document.querySelector('.menu-mobile');
 let menu_mobile_img = document.querySelector('.menu-mobile img');
 let menu_nav = document.querySelector('nav');
+
+/* Variaveis menu dropdown */
+let menu_dropdown = document.querySelectorAll('.menu-ul li .open');
+let dropdown = document.querySelector('.menu-dropdown');
+let dropdown_area = document.querySelector('.menu-dropdown .menu-area');
+
 
 menu_mobile.addEventListener('click', () => {
   if(menu_nav.classList.toggle('ativo')) {
@@ -9,14 +16,16 @@ menu_mobile.addEventListener('click', () => {
   } else {
     menu_nav.style.display = 'none';
     menu_mobile_img.src = "./images/icon-hamburger.svg";
+    // fecha o dropdown assim que fechar o menu
+    menu_dropdown.forEach((item) => {
+      item.classList.remove('active');
+      item.nextElementSibling.style.display = 'none';
+      item.style.setProperty('--arrow', '');
+    })
   }
 })
 
 /* Codigo menu dropdown */
-let menu_dropdown = document.querySelectorAll('.menu-ul li .open');
-let dropdown = document.querySelector('.menu-dropdown');
-let dropdown_area = document.querySelector('.menu-dropdown .menu-area');
-
 function menus_dropdown(item) {
   item.addEventListener('click', open_exit);
 }
