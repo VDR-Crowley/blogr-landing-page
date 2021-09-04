@@ -471,6 +471,9 @@ footer .container {
 /* Responsividade para celular */
 @media (max-width: 767px) {
 
+  .grid {
+    overflow-x: hidden;
+  }
 
   .header-bg {
     overflow-x: hidden;
