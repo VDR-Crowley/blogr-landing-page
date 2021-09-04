@@ -678,6 +678,7 @@ footer .container {
 @media (max-width: 767px) {
 
   .header-bg {
+    overflow-x: hidden;
     border-radius: 0 0 0px 20%;
   }
 
@@ -877,7 +878,7 @@ footer .container {
     left: 0;
     margin: 20px auto;
     background: url(../../images/illustration-editor-mobile.svg) no-repeat right top;
-    background-size: 100%;
+    background-size: 90%;
   }
 
   .secao-designed h3 {
@@ -903,7 +904,7 @@ footer .container {
     background: 
     url(../../images/bg-pattern-circles.svg) no-repeat 50% -129%, 
     linear-gradient(0deg, var(--Very-dark-gray-blue), var(--Very-dark-desaturated-blue));
-    background-size: 150%;
+    background-size: 100%;
     border-radius: 0 100px 0px 100px;
     z-index: 1;
   }
@@ -919,7 +920,7 @@ footer .container {
   }
 
   .secao-phone img {
-    width: 100%;
+    width: 90%;
     position: absolute;
     top: -30%;
     left: 0px;
@@ -974,13 +975,15 @@ footer .container {
     top: 0px;
     left: 0;
     background: url(../../images/illustration-laptop-mobile.svg) no-repeat center top;
-    background-size: 120%;
+    background-size: 100%;
     margin: 0 auto;
   }
 
   .secao-desktop h3 {
     font-size: 30px;
     grid-column: 1 / 2;
+    width: 90%;
+    margin: auto;
   }
 
   .secao-desktop p {
