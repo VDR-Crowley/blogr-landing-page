@@ -471,9 +471,6 @@ footer .container {
 /* Responsividade para celular */
 @media (max-width: 767px) {
 
-  * {
-    overflow-x: hidden;
-  }
 
   .header-bg {
     border-radius: 0 0 0px 20%;
@@ -772,7 +769,7 @@ footer .container {
     top: 0px;
     left: 0;
     background: url(../../images/illustration-laptop-mobile.svg) no-repeat center top;
-    background-size: 120%;
+    background-size: 100%;
     margin: 0 auto;
   }
 
