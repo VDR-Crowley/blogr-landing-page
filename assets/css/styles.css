@@ -737,5 +737,79 @@ footer .container {
     margin: 0 auto;
   }
 
+  /**/
+
+  .secao-desktop {
+    padding: 0px 0;
+    margin-bottom: 0;
+  }
+
+  .secao-desktop .container {
+    text-align: center;
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .secao-desktop .container::after {
+    content: "";
+    display: none;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: -662px;
+  }
+
+  .secao-desktop h3:nth-child(1):before {
+    content: "";
+    display: block;
+    width: 330px;
+    height: 300px;
+    position: relative;
+    top: 0px;
+    left: 0;
+    background: url(../../images/illustration-laptop-mobile.svg) no-repeat center top;
+    background-size: 120%;
+    margin: 0 auto;
+  }
+
+  .secao-desktop h3 {
+    font-size: 30px;
+    grid-column: 1 / 2;
+  }
+
+  .secao-desktop p {
+    max-width: 285px;
+    margin: 0 auto;
+    grid-column: 1 / 2;
+  }
+
+  .secao-desktop p + h3 {
+    margin: 30px auto 0;
+  }
+
+  /* footer */
+
+  footer {
+    padding: 50px 0;
+  }
+
+  footer .container {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu-logo {
+    justify-content: center;
+  }
+
+  .footer-nav {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+
+  .footer-nav ul {
+    margin-top: 50px;
+  }
 
 }
