@@ -473,6 +473,7 @@ footer .container {
 
 
   .header-bg {
+    overflow-x: hidden;
     border-radius: 0 0 0px 20%;
   }
 
