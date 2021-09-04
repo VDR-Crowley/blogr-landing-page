@@ -668,6 +668,10 @@ footer .container {
     margin-top: 0;
   }
 
+  footer .menu-logo {
+    display: block;
+  }
+
 }
 
 
@@ -1008,7 +1012,7 @@ footer .container {
     text-align: center;
   }
 
-  .menu-logo {
+  footer .menu-logo {
     justify-content: center;
   }
 
