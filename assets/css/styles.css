@@ -471,10 +471,6 @@ footer .container {
 /* Responsividade para celular */
 @media (max-width: 767px) {
 
-  body {
-    overflow-x: hidden;
-  }
-
   .header-bg {
     border-radius: 0 0 0px 20%;
   }
