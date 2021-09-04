@@ -8,8 +8,7 @@ let menu_dropdown = document.querySelectorAll('.menu-ul li .open');
 let dropdown = document.querySelector('.menu-dropdown');
 let dropdown_area = document.querySelector('.menu-dropdown .menu-area');
 
-
-menu_mobile.addEventListener('click', () => {
+function funcionalidadesMenu() {
   if(menu_nav.classList.toggle('ativo')) {
     menu_nav.style.display = 'flex';
     menu_mobile_img.src = "./images/icon-close.svg";
@@ -21,15 +20,18 @@ menu_mobile.addEventListener('click', () => {
       item.classList.remove('active');
       item.nextElementSibling.style.display = 'none';
       item.style.setProperty('--arrow', '');
-    })
+    });
   }
-})
+}
+
+menu_mobile.addEventListener('click', funcionalidadesMenu);
+
 
 /* Codigo menu dropdown */
 function menus_dropdown(item) {
   item.addEventListener('click', open_exit);
 }
-
+// função responsavel por abrir e fechar o menu
 function open_exit(event) {
   if(event.target.classList.contains('active') != true) {
     event.target.classList.add('active');
@@ -41,5 +43,5 @@ function open_exit(event) {
     event.target.style.setProperty('--arrow', '');
   }
 }
-
+// roda o menu dropdown
 menu_dropdown.forEach(menus_dropdown);

@@ -469,7 +469,11 @@ footer .container {
 }
 
 /* Responsividade para celular */
-@media (max-width: 979px) {
+@media (max-width: 767px) {
+
+  body {
+    overflow-x: hidden;
+  }
 
   .header-bg {
     border-radius: 0 0 0px 20%;
@@ -737,7 +741,7 @@ footer .container {
     margin: 0 auto;
   }
 
-  /**/
+  /* secao desktop */
 
   .secao-desktop {
     padding: 0px 0;
