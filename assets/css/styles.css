@@ -48,6 +48,10 @@ a {
   transition: .2s;
 }
 
+img {
+  display: block;
+}
+
 footer {
   background: var(--Very-dark-black-blue-footer-background);
 }
@@ -340,7 +344,6 @@ main {
 
 .secao-phone {
   margin: 170px 0 100px;
-  height: 395px;
   position: relative;
   background: url(../../images/bg-pattern-circles.svg) no-repeat -80% 80%, linear-gradient(0deg, var(--Very-dark-gray-blue), var(--Very-dark-desaturated-blue));
   background-size: 75%;
@@ -350,34 +353,37 @@ main {
 
 .secao-phone .container {
   display: grid;
-  grid-template-columns: 1fr 500px;
-  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr minmax(100px, 500px);
+  grid-template-rows: 370px;
   gap: 20px 0;
   color: white;
   padding: 20px 0px;
   border-radius: 0 0 0 50%;
 }
 
-
 .secao-phone img {
-  position: absolute;
-  top: -70px;
+  margin-top: -14%;
+}
+
+.phone-conteudo {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  display: grid;
+  gap: 20px 0;
+  grid-template-columns: minmax(300px, 1fr); 
+  grid-template-rows: 110px minmax(200px, 300px);
 }
 
 .secao-phone h3 {
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
-  padding: 20px 0 0;
   font-size: 24px;
   align-self: end;
+  grid-row: 1 / 2;
 }
 
 .secao-phone p {
-  max-width: 500px;
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
   font-size: 16px;
-  line-height: 30px
+  line-height: 30px;
+  grid-row: 2 / 3;
 }
 
 /* secao-desktop */
@@ -631,24 +637,25 @@ footer .container {
 
   .secao-phone {
     margin: 50px 0 50px;
-    height: 300px;
   }
 
   .secao-phone .container {
     grid-template-columns: 1fr 400px;
+    grid-template-rows: 272px;
     gap: 0;
     padding: 0;
     grid-auto-rows: 100px;
   }
 
   .secao-phone img {
-    position: absolute;
-    top: -50%;
-    width: 50%;
+    width: 100%;
   }
 
+  .phone-conteudo {
+    grid-template-rows: 70px minmax(100px, 200px);
+  }
   .secao-phone h3 {
-    align-self: center;
+    align-self: end;
   }
 
   /* secao desktop */
@@ -878,10 +885,10 @@ footer .container {
     width: 330px;
     height: 300px;
     position: relative;
+    margin: 20px auto;
     top: 20px;
     left: 0;
-    margin: 20px auto;
-    background: url(../../images/illustration-editor-mobile.svg) no-repeat right top;
+    background: url(../../images/illustration-editor-mobile.svg) no-repeat center top;
     background-size: 90%;
   }
 
@@ -903,10 +910,9 @@ footer .container {
 
   .secao-phone {
     /* margin: 170px 0 100px; */
-    height: 700px;
     position: relative;
     background: 
-    url(../../images/bg-pattern-circles.svg) no-repeat 50% -129%, 
+    url(../../images/bg-pattern-circles.svg) no-repeat 50% -50%, 
     linear-gradient(0deg, var(--Very-dark-gray-blue), var(--Very-dark-desaturated-blue));
     background-size: 100%;
     border-radius: 0 100px 0px 100px;
@@ -915,7 +921,8 @@ footer .container {
 
   .secao-phone .container {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
     grid-auto-rows: 160px;
     gap: 0px 0;
     color: white;
@@ -924,28 +931,33 @@ footer .container {
   }
 
   .secao-phone img {
-    width: 90%;
-    position: absolute;
-    top: -30%;
-    left: 0px;
+    width: 100%;
+    margin-top: -50%;
+    grid-area: 1 / 2;
+    grid-row: 1 / 2;
+    justify-self: center;
+  }
+
+  .phone-conteudo {
+    grid-template-rows: auto minmax(200px, 300px) 300px;
   }
   
-
   .secao-phone h3 {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     padding: 20px 0 0;
     font-size: 36px;
     max-width: 280px;
-    align-self: center;
     margin: 0 auto;
+    align-self: end;
   }
 
   .secao-phone p {
     grid-column: 1 / 2;
-    grid-row: 3 / 5;
+    grid-row: 3 / 4;
     max-width: 300px;
     margin: 0 auto;
+    align-self: start;
   }
 
   /* secao desktop */
