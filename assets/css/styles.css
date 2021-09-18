@@ -67,21 +67,6 @@ footer {
   border-radius: 0 0 0px 10%;
   padding: 40px 0;
 }
-/*
-.header-bg::before {
-  content: "";
-  display: block;
-  width: 160%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: -60%;
-  background: url("../../images/bg-pattern-intro.svg") no-repeat center;
-  background-size: 100%;
-  background-clip: content-box;
-  transform: scale(1) rotate(0deg);
-  z-index: -1;
-}*/
 
 header {
   z-index: 3;
@@ -311,7 +296,7 @@ main {
   background-size: 100%;
 }
 
-.secao-designed h1 {
+.secao-designed h2 {
   text-align: center;
   font-size: 36px;
   color: var(--Very-dark-gray-blue)
@@ -471,7 +456,7 @@ footer .container {
 
 
 /* Responsividade para tablet */
-@media (min-width: 768px) and (max-width: 979px) {
+@media (min-width: 768px) and (max-width: 979px) and (orientation: portrait) {
   .header-bg {
     border-radius: 0 0 0px 20%;
   }
@@ -875,7 +860,7 @@ footer .container {
     top: -662px;
   }
 
-  .secao-designed h1 {
+  .secao-designed h2 {
     font-size: 24px;
   }
 
@@ -1033,8 +1018,321 @@ footer .container {
     flex-direction: column;
   }
 
-  .footer-nav ul {
+  .footer-nav .footer-menu {
     margin-top: 50px;
   }
+
+}
+
+@media (max-height: 440px) {
+
+  .header-bg {
+    overflow-x: hidden;
+    border-radius: 0 0 0px 20%;
+  }
+
+  .menu-logo {
+    display: flex;
+    align-content: center;
+  }
+
+  .menu-mobile {
+    display: block;
+    justify-self: center;
+    grid-column: 3 / 4;
+    margin-right: 10px;
+    align-self: center;
+    padding: 5px 5px 0;
+  }
+
+  .menu-mobile img {
+    cursor: pointer;
+  }
+  
+  .menu-nav {
+    display: none;
+    flex-direction: column;
+    grid-column: 1 / 4;
+    justify-content: center;
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    padding: 10px 0 10px 0;
+    width: 90%;
+    justify-self: center;
+    background-color: white;
+    border-radius: 10px;
+    transition: background .5s;
+    z-index: 9999;
+  }
+
+  .menu-nav.ativo {
+    display: none;
+  }
+
+  .menu-ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu-ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-ul li + li {
+    margin-left: 0px;
+    margin-top: 20px;
+  }
+
+  .menu-ul li a {
+    color: black;
+    font-weight: bold;
+  }
+
+  .menu-ul li a::after {
+    background: var(--arrow-up) no-repeat center;
+  }
+
+  .menu-dropdown {
+    display: none;
+    width: 90%;
+    background: #f4f4f4;
+    position: static;
+    border-radius: 10px;
+    box-shadow: 0 0 0;
+    margin-top: 10px;
+  }
+  
+  .menu-dropdown .dropdown-area {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .menu-dropdown .dropdown-area li {
+    width: 100%;
+  }
+
+  .login-area::before {
+    content: "";
+    display: block;
+    background-color: #f4f4f4;
+    width: 90%;
+    height: 2px;
+    margin-top: 10px;
+    justify-self: center;
+    grid-row: 1 / 2;
+  }
+  
+  .login-area {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    background-color: white;
+    grid-column: 1 / 4;
+    margin-right: 0;
+    padding: 0px 0 10px;
+    width: 90%;
+    gap: 10px 0;
+    justify-self: center;
+    justify-content: center;
+    z-index: 2;
+  }
+  
+  .login-area a {
+    display: inline-block;
+    padding: 10px 15px;
+    color: black;
+    justify-self: center;
+    text-align: center;
+    grid-row: 2 / 3;
+    font-weight: bold;
+  }
+  
+  .login-area a + a {
+    margin-left: 0px;
+    grid-row: 3 / 4;
+  }
+
+  .login-area a.button {
+    justify-self: center;
+    background: linear-gradient(130deg, #ff8f70, #ff3d54);
+    color: var(--White-text) !important;
+    transition: background 0.2s;
+  }
+
+  .login-area a.button:hover {
+    background: linear-gradient(250deg, #ff8f70, #ff3d54)
+  }
+
+  .introducao {
+    margin: 20px 0;
+    padding: 20px 10px;
+  }
+
+  .introducao h1 {
+    font-size: 2em;
+    line-height: 40px;
+    max-width: 281px;
+    margin: 0 auto;
+  }
+
+  .introducao p {
+    font-size: 18px;
+    max-width: 280px;
+    margin: 20px auto;
+  }
+
+  .introducao a {
+    padding: 10px 20px !important;
+    margin: 30px 0px;
+  }
+
+  .introducao a + a {
+    margin-left: 10px;
+  }
+
+  /* secao designed */
+
+  .secao-designed {
+    padding: 80px 0;
+  }
+
+  .secao-designed .container {
+    text-align: center
+  }
+
+  .secao-designed .container::after {
+    content: "";
+    display: none;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: -662px;
+  }
+
+  .secao-designed h1 {
+    font-size: 24px;
+  }
+
+  .secao-designed h1::after {
+    content: "";
+    display: block;
+    width: 330px;
+    height: 300px;
+    position: relative;
+    margin: 20px auto;
+    top: 20px;
+    left: 0;
+    background: url(../../images/illustration-editor-mobile.svg) no-repeat center top;
+    background-size: 90%;
+  }
+
+  .secao-designed h3 {
+    margin: 20px auto;
+    max-width: 200px;
+  }
+
+  .secao-designed p {
+    max-width: 300px;
+    margin: 0px auto;
+  }
+
+  .secao-designed p + h3 {
+    margin: 20px auto;
+  }
+
+
+  .secao-phone .container {
+    grid-template-rows: 0px 1fr;
+  }
+
+  .secao-phone img {
+    width: 70%;
+    margin-top: -35%;
+  }
+
+  .phone-conteudo {
+    grid-row: 2 / 3;
+  }
+
+    /* secao desktop */
+
+    .secao-desktop {
+      padding: 0px 0;
+      margin-bottom: 0;
+    }
+  
+    .secao-desktop .container {
+      text-align: center;
+      grid-template-columns: 1fr;
+      padding: 0;
+    }
+  
+    .secao-desktop .container::after {
+      content: "";
+      display: none;
+      width: 200px;
+      height: 200px;
+      position: relative;
+      top: -662px;
+    }
+  
+    .secao-desktop h3:nth-child(1):before {
+      content: "";
+      display: block;
+      width: 330px;
+      height: 300px;
+      position: relative;
+      top: 0px;
+      left: 0;
+      background: url(../../images/illustration-laptop-mobile.svg) no-repeat center top;
+      background-size: 100%;
+      margin: 0 auto;
+    }
+  
+    .secao-desktop h3 {
+      font-size: 30px;
+      grid-column: 1 / 2;
+      width: 90%;
+      margin: auto;
+    }
+  
+    .secao-desktop p {
+      max-width: 285px;
+      margin: 0 auto;
+      grid-column: 1 / 2;
+    }
+  
+    .secao-desktop p + h3 {
+      margin: 30px auto 0;
+    }
+  
+    /* footer */
+  
+    footer {
+      padding: 50px 0;
+    }
+  
+    footer .container {
+      flex-wrap: nowrap;
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    footer .menu-logo {
+      justify-content: center;
+    }
+  
+    .footer-nav {
+      flex-wrap: nowrap;
+      flex-direction: column;
+    }
+  
+    .footer-nav ul {
+      margin-top: 50px;
+    }
 
 }
